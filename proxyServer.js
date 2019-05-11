@@ -7,7 +7,7 @@ const request = require('request-promise');
 app.use(cors());
 app.use('/api', router);
 
-const port = 3001;
+const port = process.env.PORT || 8080;
 
 app.listen(port, (err) => {
     if (err) {
